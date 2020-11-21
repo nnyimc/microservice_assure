@@ -36,8 +36,8 @@ import fr.nnyimc.microservice_assure.configuration.ApplicationPropertiesConfigur
 import fr.nnyimc.microservice_assure.entities.Assure;
 import fr.nnyimc.microservice_assure.exceptions.AssureIntrouvableException;
 import fr.nnyimc.microservice_assure.exceptions.AucunAssureException;
-import fr.nnyimc.microservice_assure.exceptions.service.AssureService;
-import fr.nnyimc.microservice_assure.exceptions.service.AssureServiceImplementation;
+import fr.nnyimc.microservice_assure.service.AssureService;
+import fr.nnyimc.microservice_assure.service.AssureServiceImplementation;
 import io.swagger.annotations.ApiOperation;
 
 

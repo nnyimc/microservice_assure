@@ -1,4 +1,4 @@
-package fr.nnyimc.microservice_assure.exceptions.service;
+package fr.nnyimc.microservice_assure.service;
 
 import java.util.Date;
 import java.util.List;
