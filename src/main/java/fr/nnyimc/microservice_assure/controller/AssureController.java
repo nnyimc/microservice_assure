@@ -296,5 +296,6 @@ public class AssureController {
 		}
 		return listeAssures;
 	}
-	
+
 }
+

@@ -1,16 +1,23 @@
 package fr.nnyimc.microservice_assure;
 
+//import java.text.SimpleDateFormat;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.ApplicationContext;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+//import org.springframework.context.ApplicationContext;
 
 import fr.nnyimc.microservice_assure.dao.AssureRepository;
+//import fr.nnyimc.microservice_assure.entities.Assure;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @SpringBootApplication
+@EnableSwagger2
+@EnableDiscoveryClient
 public class MicroserviceAssureApplication implements ApplicationRunner {
 	private AssureRepository assureRepository;
 	Logger log = LoggerFactory.getLogger(getClass());
@@ -25,33 +32,43 @@ public class MicroserviceAssureApplication implements ApplicationRunner {
 
 	@Override
 	public void run(ApplicationArguments args) {
-	/*	
+		/*
 		try {
 			Assure a1 = (Assure) Class.forName("fr.nnyimc.microservice_assure.entities.Assure").newInstance();
-			a1.setNom("Freeway");
-			a1.setPrenom("Linda");
-			a1.setNumeroAssure(120L);
-			a1.setNumeroPersonne(23L);
-			a1.setDossierMedical("Cancer");
-			a1.setDateNaissance(new SimpleDateFormat("yyyy-MM-dd").parse("1983-02-18"));
+			a1.setNom("Welsh");
+			a1.setPrenom("Davif");
+			a1.setNumeroAssure(75L);
+			a1.setNumeroPersonne(20L);
+			a1.setDossierMedical("");
+			a1.setDateNaissance(new SimpleDateFormat("yyyy-MM-dd").parse("1987-05-11"));
 			assureRepository.save(a1);
 			
 			Assure a2 = (Assure) Class.forName("fr.nnyimc.microservice_assure.entities.Assure").newInstance();
-			a2.setNom("Cross");
-			a2.setPrenom("Paul");
-			a2.setNumeroAssure(100L);
-			a2.setNumeroPersonne(13L);
-			a2.setDossierMedical("");
-			a2.setDateNaissance(new SimpleDateFormat("yyyy-MM-dd").parse("1983-02-18"));
+			a2.setNom("Béliveau");
+			a2.setPrenom("Marcel");
+			a2.setNumeroAssure(63L);
+			a2.setNumeroPersonne(4L);
+			a2.setDossierMedical("Diabète type 2");
+			a2.setDateNaissance(new SimpleDateFormat("yyyy-MM-dd").parse("1960-02-14"));
 			assureRepository.save(a2);
+			
+			Assure a3 = (Assure) Class.forName("fr.nnyimc.microservice_assure.entities.Assure").newInstance();
+			a3.setNom("Mascarpone");
+			a3.setPrenom("Bertille");
+			a3.setNumeroAssure(230L);
+			a3.setNumeroPersonne(104L);
+			a3.setDossierMedical("Anorexie");
+			a3.setDateNaissance(new SimpleDateFormat("yyyy-MM-dd").parse("2001-08-19"));
+			assureRepository.save(a3);
 		} catch (Exception e) {
 			errorLogger("Error " + e.getMessage());
-		}
-		*/
+		}*/
+		
 	}
 
+	/*
 	private void errorLogger(String s) {
 		log.info("\r\n------->" + s);
 	}
-	
+	*/
 }

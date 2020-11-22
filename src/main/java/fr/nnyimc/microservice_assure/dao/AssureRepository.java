@@ -4,7 +4,6 @@ import java.util.Date;
 import java.util.List;
 
 import org.springframework.data.repository.CrudRepository;
-
 import fr.nnyimc.microservice_assure.entities.Assure;
 
 public interface AssureRepository extends CrudRepository<Assure, Long>{
