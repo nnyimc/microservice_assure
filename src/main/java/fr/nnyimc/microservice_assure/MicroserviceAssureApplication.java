@@ -10,6 +10,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 //import org.springframework.context.ApplicationContext;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 
 import fr.nnyimc.microservice_assure.dao.AssureRepository;
 //import fr.nnyimc.microservice_assure.entities.Assure;
@@ -18,6 +19,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @SpringBootApplication
 @EnableSwagger2
 @EnableDiscoveryClient
+@EnableFeignClients
 public class MicroserviceAssureApplication implements ApplicationRunner {
 	private AssureRepository assureRepository;
 	Logger log = LoggerFactory.getLogger(getClass());

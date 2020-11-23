@@ -20,7 +20,6 @@ public class SwaggerConfig {
 				.apis(RequestHandlerSelectors.basePackage("fr.nnyimc.microservices_assure.controller"))
 				.paths(PathSelectors.regex("/assur3000.*"))
 				.build();
-		
 	}
 	
 }
